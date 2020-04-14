@@ -32,7 +32,6 @@ const main = () => {
             const { year, month, day, hour, minute, second } = weather.data.forecast.issue;
             $(".display-datetime").text(`Last Updated Data: ${day._text}-${month._text}-${year._text} ${hour._text}:${minute._text}:${second._text}`);
             areas.map((area, idx) => {
-                console.log(area);
                 tableContent.append(`
                     <tr>
                         <th>${idx+1}</th>
