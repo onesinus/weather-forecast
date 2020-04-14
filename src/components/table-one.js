@@ -10,10 +10,12 @@ class TableOne extends HTMLElement{
                             <th>Area</th>
                             <th><abbr title="Longitude">Longitude</abbr></th>
                             <th><abbr title="Latitude">Latitude</abbr></th>
-                            <th><abbr title="Percentage">%</abbr></th>
-                            <th><abbr title="Celcius">C</abbr></th>
-                            <th><abbr title="Fahrenheit">F</abbr></th>
-                            <th>Status</th>
+                            <th><abbr title="Humidity">Humidity</abbr></th>
+                            <th><abbr title="Temperature">Temperature</abbr></th>                            
+                            <th><abbr title="Tomorrow Humidity">H+1 Humidity</abbr></th>
+                            <th><abbr title="Tomorrow Temperature">H+1 Temperature</abbr></th>                            
+                            <th><abbr title="The Day After Tomorrow Humidity">H+2 Humidity</abbr></th>
+                            <th><abbr title="The Day After Tomorrow Temperature">H+2 Temperature</abbr></th>                            
                         </tr>
                         </thead>
                         <tbody>

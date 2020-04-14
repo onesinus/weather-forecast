@@ -29,20 +29,22 @@ const main = () => {
 
             
             const areas = weather.data.forecast.area || [];
-            console.log(weather.data.forecast.issue);
             const { year, month, day, hour, minute, second } = weather.data.forecast.issue;
-            $(".display-datetime").text(`Date / Time: ${day._text}-${month._text}-${year._text} ${hour._text}:${minute._text}:${second._text}`);
+            $(".display-datetime").text(`Last Updated Data: ${day._text}-${month._text}-${year._text} ${hour._text}:${minute._text}:${second._text}`);
             areas.map((area, idx) => {
+                console.log(area);
                 tableContent.append(`
                     <tr>
                         <th>${idx+1}</th>
                         <td>${area.name[0]._text}</td>
                         <td>${area._attributes.longitude}</td>
                         <td>${area._attributes.latitude}</td>
-                        <td>90</td>
-                        <td></td>
-                        <td></td>
-                        <td>Aman Terkendali</td>
+                        <td>${area.parameter[3].timerange[0].value._text}% - ${area.parameter[1].timerange[0].value._text}%</td>
+                        <td>${area.parameter[4].timerange[0].value[0]._text}°C - ${area.parameter[2].timerange[0].value[0]._text}°C</td>
+                        <td>${area.parameter[3].timerange[1].value._text}% - ${area.parameter[1].timerange[1].value._text}%</td>
+                        <td>${area.parameter[4].timerange[1].value[0]._text}°C - ${area.parameter[2].timerange[1].value[0]._text}°C</td>
+                        <td>${area.parameter[3].timerange[2].value._text}% - ${area.parameter[1].timerange[2].value._text}%</td>
+                        <td>${area.parameter[4].timerange[2].value[0]._text}°C - ${area.parameter[2].timerange[2].value[0]._text}°C</td>
                     </tr>
                 `);
             });
