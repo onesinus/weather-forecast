@@ -2,6 +2,7 @@ import $ from "jquery";
 
 /* Required Tools */
 const convert = require('xml-js');
+const CronJob = require('cron').CronJob;
 /* Required Tools */
 class MenuLeft extends HTMLElement{
     constructor() {
@@ -28,7 +29,18 @@ class MenuLeft extends HTMLElement{
         this.getWeather(`https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-${this.city}.xml`);
     }
 
+    autoUpdateData() {
+        const job = new CronJob('0 0 * * *', () => {
+            this.render();
+        }, null, true, 'Asia/Jakarta');
+        
+        job.start();
+    }
+
     connectedCallback() {
+        /* Auto fetch everyday at 00:00 */
+        this.autoUpdateData();
+        /* End Auto fetch */
         this.render();
     }
 
