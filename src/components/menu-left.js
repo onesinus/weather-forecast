@@ -73,7 +73,11 @@ class MenuLeft extends HTMLElement{
             
             const areas = weather.data.forecast.area || [];
             const { year, month, day, hour, minute, second } = weather.data.forecast.issue;
-            $(".display-datetime").text(`Last Updated Data: ${day._text}-${month._text}-${year._text} ${hour._text}:${minute._text}:${second._text}`);
+            
+            const strDate = `${day._text}-${month._text}-${year._text}`;
+            const strTime = `${hour._text}:${minute._text}:${second._text}`;
+
+            $(".display-datetime").text(`Last Updated Data: ${strDate} ${strTime} [Auto re-fetch data everyday at 00:00]`);
             areas.map((area, idx) => {
                 tableContent.append(`
                     <tr>
