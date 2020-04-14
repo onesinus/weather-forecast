@@ -9,58 +9,15 @@
     </head>
     <body>
         <div class="columns is-mobile">
-            <div class="column">
-                <img src="../icon.png" alt="Logo">
-                <aside class="menu">
-                    <ul class="menu-list">
-                      <li><a class="is-active">Jakarta Timur</a></li>
-                      <li><a>Jakarta Barat</a></li>
-                      <li><a>Jakarta Selatan</a></li>
-                      <li><a>Jakarta Utara</a></li>
-                      <li><a>Jakarta Pusat</a></li>
-                      <li><a>Kepulauan Seribu</a></li>
-                    </ul>
-                </aside>        
-            </div>
-            <div class="column is-three-quarters-widescreen">
-                <div class="table-container _list-weather">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Area Code</th>
-                            <th><abbr title="Longitude">Longitude</abbr></th>
-                            <th><abbr title="Latitude">Latitude</abbr></th>
-                            <th><abbr title="Date">Date</abbr></th>
-                            <th><abbr title="Time">Time</abbr></th>
-                            <th><abbr title="Percentage">%</abbr></th>
-                            <th><abbr title="Celcius">C</abbr></th>
-                            <th><abbr title="Fahrenheit">F</abbr></th>
-                            <th>Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="is-selected">
-                            <th>1</th>
-                            <td>501192</td>
-                            <td>106.731319</td>
-                            <td>-6.203019</td>
-                            <td>13-04-2020</td>
-                            <td>05:30:10</td>
-                            <td>90</td>
-                            <td></td>
-                            <td></td>
-                            <td>Aman Terkendali</td>
-                          </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="_footer container is-fullhd">
-            <div class="notification has-text-centered">
-                <strong>Forecast Data by: </strong> <a  target="_blank" href="https://data.bmkg.go.id/prakiraan-cuaca/">BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</a>.
-            </div>
-        </div>
+            <!-- Menu Left -->
+            <menu-left class="column"></menu-left>
+            <!-- End Menu Left -->
+
+            <!-- Table Weather Forecast -->
+            <table-one class="column is-three-quarters-widescreen"></table-one>
+            <!-- End Table Weather Forecast -->
+            <!-- Footer -->
+            <footer-one class="_footer container is-fullhd"></footer-one>
+            <!-- End Footer -->
     </body>
 </html>
